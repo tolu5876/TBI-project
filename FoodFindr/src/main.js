@@ -74,6 +74,11 @@ const countries = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Ar
         emailError.style.display = 'none';
       }
 
+      // save in localStorage
+      localStorage.setItem("registeredEmail", email);
+      localStorage.setItem("registeredPassword", document.getElementById('password').value);
+
+
       // DOB validation
       const dob = document.getElementById('DOB').value.trim();
       const dobError = document.getElementById('error-dob');
@@ -139,7 +144,7 @@ const countries = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Ar
         document.getElementById('successAlert').style.display = 'flex';
         setTimeout(function() {
           document.getElementById('successAlert').style.display = 'none';
-          window.location.href = 'login.html';
+          window.location.href = 'logino.html';
         }, 3000);
         form.reset();
         let radios = document.querySelectorAll('input[name="gender"]');
@@ -147,3 +152,14 @@ const countries = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Ar
         document.getElementById('terms').checked = false;
       }
     });
+    document.getElementById("registerForm").addEventListener("submit", function (e) {
+  e.preventDefault(); // stop page refresh
+
+  // show loader
+  // document.getElementById("loader").style.display = "flex";
+
+  // fake loading time (2 sec)
+  // setTimeout(() => {
+  //   window.location.href = "dashboard.html";
+  // }, 2000);
+});

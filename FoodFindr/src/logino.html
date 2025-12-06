@@ -144,7 +144,7 @@
             })
             .catch(() => {
               resetAlert.querySelector("div").textContent =
-                "Network error. Please try again later.";
+                "please our website server network is currently not good please try agian later.";
               resetAlert.className =
                 "alert alert-danger d-flex align-items-center";
               resetAlert.style.display = "flex";
@@ -182,37 +182,41 @@
           }
 
           // Demo: hardcoded valid credentials
-          const validEmail = "user@example.com";
-          const validPassword = "password123";
-          if (!hasError) {
-            let alertMsg = "";
-            if (
-              email !== validEmail &&
-              email &&
-              password !== validPassword &&
-              password
-            ) {
-              alertMsg = "Incorrect email or password!";
-            } else if (email !== validEmail && email) {
-              alertMsg = "Incorrect email!";
-            } else if (password !== validPassword && password) {
-              alertMsg = "Incorrect password!";
-            }
-            if (alertMsg) {
-              loginAlert.querySelector("div").textContent = alertMsg;
-              loginAlert.style.display = "flex";
-              errorEmail.style.display = "none";
-              errorPassword.style.display = "none";
-              return;
-            } else {
-              loginAlert.style.display = "none";
-              errorEmail.style.display = "none";
-              errorPassword.style.display = "none";
-              window.location.href = "dashboard.html";
-            }
-          } else {
-            loginAlert.style.display = "none";
-          }
+          // const validEmail = "user@example.com";
+          // const validPassword = "password123";
+          // const savedEmail = localStorage.getItem("registeredEmail");
+          // const savedPassword = localStorage.getItem("registeredPassword");
+          // const validEmail = savedEmail ? savedEmail : "";
+          // const validPassword = savedPassword ? savedPassword : "";
+          //   if (!hasError) {
+          //     let alertMsg = "";
+          //     if (
+          //       email !== savedEmail &&
+          //       email &&
+          //       password !== savedPassword &&
+          //       password
+          //     ) {
+          //       alertMsg = "Incorrect email or password!";
+          //     } else if (email !== registered && email) {
+          //       alertMsg = "Incorrect email!";
+          //     } else if (password !== validPassword && password) {
+          //       alertMsg = "Incorrect password!";
+          //     }
+          //     if (alertMsg) {
+          //       loginAlert.querySelector("div").textContent = alertMsg;
+          //       loginAlert.style.display = "flex";
+          //       errorEmail.style.display = "none";
+          //       errorPassword.style.display = "none";
+          //       return;
+          //     } else {
+          //       loginAlert.style.display = "none";
+          //       errorEmail.style.display = "none";
+          //       errorPassword.style.display = "none";
+          //       window.location.href = "dashboard.html";
+          //     }
+          //   } else {
+          //     loginAlert.style.display = "none";
+          //   }
         });
     </script>
   </body>
