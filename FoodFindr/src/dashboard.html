@@ -1,3 +1,4 @@
+<!-- home.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,38 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FoodieFindr - Dashboard</title>
     <link rel="stylesheet" href="output.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+
   </head>
-
-  <style>
-    #loader {
-      border: 6px solid #f3f3f3;
-      border-top: 6px solid #3498db;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      animation: spin 1s linear infinite;
-      margin: 100px auto;
-    }
-
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-  </style>
   <body
     class="min-h-screen bg-linear-to-br from-white via-orange-100 to-orange-400"
   >
-    <div id="loader"></div>
-    <div id="content" style="display: none"></div>
     <header class="text-gray-600 body-font">
       <div
         class="container border-b-2 border-black mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
@@ -66,41 +41,22 @@
           <a class="mr-5 hover:text-orange-600">Team</a>
         </nav>
         <button
-          class="text-gray-900 hover:text-orange-600 px-4 py-4 rounded shadow text-base flex items-center gap-2"
+          class="text-gray-900 hover:text-orange-600 px-4 py-4  rounded shadow text-base flex items-center gap-2"
         >
-          <svg
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            class="w-5 h-5"
-            viewBox="0 0 24 24"
-          >
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
             <circle cx="11" cy="11" r="8"></circle>
             <path d="m21 21-4.35-4.35"></path>
           </svg>
-          Search
+         <input type="search" placeholder="search for ingredients" > <a href=""> Search</a>
         </button>
-        <a href="logino.html"
-          ><button
-            class="text-gray-900 hover:text-orange-600 px-4 py-4 rounded shadow text-base flex items-center gap-2 ml-3"
-          >
-            <svg
-              fill="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              class="w-5 h-5"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"
-              ></path>
-            </svg>
-            Sign out
-          </button></a
+        <button
+          class="text-gray-900 hover:text-orange-600 px-4 py-4 rounded shadow text-base flex items-center gap-2 ml-3"
         >
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path>
+          </svg>
+          Sign Up
+        </button>
       </div>
     </header>
     <!--  -->
@@ -108,8 +64,6 @@
     <section class="text-gray-600 body-font">
       <div
         class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center"
-        data-aos="fade-right"
-        data-aos-duration="1000"
       >
         <div
           class="lg:grow md:w-1/3 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
@@ -134,14 +88,12 @@
             <button
               class="ml-4 inline-flex text-gray-700 bg-green-600 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"
             >
-              <a href="CONTECT.html"> Contact Us</a>
+             <a href="Contact Us.html"> Contact Us</a>
             </button>
           </div>
         </div>
         <div
           class="lg:max-w-xl lg:w-full md:w-1/3 w-11/12 flex items-center justify-end"
-          animate__animated
-          animate__bounce
         >
           <img
             class="w-full max-w-md h-48 md:h-56 lg:h-64 object-cover object-center rounded-lg shadow-lg"
@@ -252,15 +204,5 @@
         </span>
       </div>
     </footer>
-
-    <script>
-      window.addEventListener("load", () => {
-        document.getElementById("loading-overlay").style.display = "none";
-      });
-    </script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
   </body>
 </html>
